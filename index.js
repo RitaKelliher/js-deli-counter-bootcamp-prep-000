@@ -1,9 +1,18 @@
+ticket = 1
+
 function takeANumber(array, name) {
  array.push(name)
  var place = [array.indexOf(name) + 1]
 return `Welcome, ${name}. You are number ${place} in line.`
 }
+function takeANumberAlt(array){
+  array.push(++ticket)
+  return `You are number ${ticket} .`
+}
 
+function resetCounter(){
+   ticket = 0
+}
 function nowServing(array) {
   if(array.length === 0) {
     return "There is nobody waiting to be served!"
